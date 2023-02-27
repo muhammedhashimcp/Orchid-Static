@@ -1,6 +1,10 @@
 import React from "react";
+import BookPlot from "../Forms/BookPlot";
+import BookMyPlot from "../Forms/BookMyPlot";
+import MoreQuestion from "../Forms/MoreQuestion";
 
 export default function Faqs() {
+
   return (
     <div className="container mx-auto mt-16 mb-10 p-6">
       <div className="flex justify-center">
@@ -75,35 +79,9 @@ export default function Faqs() {
                 Reach us by Filling in the contact form below to get complete
                 assistance in booking:
               </p>
-
-              <div className="">
-                <form className="bg-white py-6">
-                  <div className="flex items-center border-2 py-2 px-3 mb-4">
-                    <input
-                      className="pl-2 outline-none border-none"
-                      type="text"
-                      name=""
-                      id=""
-                      placeholder="Your Name"
-                    />
-                  </div>
-                  <div className="flex items-center border-2 py-2 px-3 mb-4">
-                    <input
-                      className="pl-2 outline-none border-none"
-                      type="text"
-                      name=""
-                      id=""
-                      placeholder="Your Mobile Number"
-                    />
-                  </div>
-                  <button
-                    type="submit"
-                    className="block bg-sky-900 hover:bg-gray-700 mt-4 py-2 text-white font-semibold mb-2 px-4"
-                  >
-                    Register Now
-                  </button>
-                </form>
-              </div>
+              {/* <div className="">
+                <BookPlot/>
+              </div> */}
             </div>
           </details>
         </div>
@@ -135,88 +113,42 @@ export default function Faqs() {
             </summary>
             <div className="mt-3">
               <p className="text-sm leading-6 text-gray-600">
-                Its a complete clear title property. The land is freehold, marakatble and free from all encumbrances.
+                Its a complete clear title property. The land is freehold,
+                marakatble and free from all encumbrances.
               </p>
             </div>
           </details>
           <details className="p-4 rounded-lg cursor-pointer">
             <summary className="font-semibold">
-                If i want to book my dream plot at "Orchid Nirvana 3.0 project", are there any special offers in for me?
+              If i want to book my dream plot at "Orchid Nirvana 3.0 project",
+              are there any special offers in for me?
             </summary>
             <div className="mt-3">
               <p className="text-sm leading-6 text-gray-600">
-                Yes, There is a special Pre-launch offer for the first few customers only, reach us by filling in 
-                the contact form below to know the special offers:
+                Yes, There is a special Pre-launch offer for the first few
+                customers only, reach us by filling in the contact form below to
+                know the special offers:
               </p>
 
-              <div className="">
-                <form className="bg-white py-6">
-                  <div className="flex items-center border-2 py-2 px-3 mb-4">
-                    <input
-                      className="pl-2 outline-none border-none"
-                      type="text"
-                      name=""
-                      id=""
-                      placeholder="Your Name"
-                    />
-                  </div>
-                  <div className="flex items-center border-2 py-2 px-3 mb-4">
-                    <input
-                      className="pl-2 outline-none border-none"
-                      type="text"
-                      name=""
-                      id=""
-                      placeholder="Your Mobile Number"
-                    />
-                  </div>
-                  <button
-                    type="submit"
-                    className="block bg-sky-900 hover:bg-gray-700 mt-4 py-2 text-white font-semibold mb-2 px-4"
-                  >
-                    Contact Us
-                  </button>
-                </form>
-              </div>
+              {/* <div className="">
+                <BookMyPlot/>
+              </div> */}
             </div>
           </details>
           <details className="p-4 rounded-lg cursor-pointer">
             <summary className="font-semibold">
-              What to do if i have more questions or need further clarifications?
+              What to do if i have more questions or need further
+              clarifications?
             </summary>
             <div className="mt-3">
               <p className="text-sm leading-6 text-gray-600">
-                Reach us by Filling in the contact form below, so that we can reach you at the earliest 
-                to clarify all your queries.
+                Reach us by Filling in the contact form below, so that we can
+                reach you at the earliest to clarify all your queries.
               </p>
 
-              <div className="">
-                <form className="bg-white py-6">
-                  <div className="flex items-center border-2 py-2 px-3 mb-4">
-                    <input
-                      className="pl-2 outline-none border-none"
-                      type="text"
-                      name=""
-                      id=""
-                      placeholder="Your Name"
-                    />
-                  </div>
-                  <div className="flex items-center border-2 py-2 px-3 mb-4">
-                    <input
-                      className="pl-2 outline-none border-none"
-                      type="text"
-                      name=""
-                      id=""
-                      placeholder="Your Mobile Number"
-                    />
-                  </div>
-                  <button
-                    type="submit"
-                    className="block bg-sky-900 hover:bg-gray-700 mt-4 py-2 text-white font-semibold mb-2 px-4"
-                  >
-                    Contact Us
-                  </button>
-                </form>
-              </div>
+              {/* <div className="">
+                <MoreQuestion/>
+              </div> */}
             </div>
           </details>
         </div>

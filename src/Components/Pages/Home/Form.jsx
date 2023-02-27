@@ -1,81 +1,183 @@
-import React,{useEffect} from "react";
+import React, { useEffect,useRef } from "react";
+import emailjs from '@emailjs/browser';
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useFormik } from "formik";
+import * as Yup from "yup";
 
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import contactus from "../../../images/orch.jpg";
+import BrochureDownload from "../../Modals/BrochureDownload";
+
+//Form schema
+const formSchema = Yup.object({ 
+  name: Yup.string().min(2).max(25).required("Please enter your name"),
+  mobile: Yup.string()
+    .min(10)
+    .max(25)
+    .required("Please enter your Mobile Number"),
+  email: Yup.string().required("Please enter your email"),
+  message: Yup.string().required("Please enter your Requirement"),
+});
+
+const initialValues = {
+  name: "",
+  mobile: "",
+  email: "",
+  message: "",
+};
 
 const Form = () => {
-   useEffect(() => {
-        AOS.init();
-      }, [])
+
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    console.log('Sending email');
+    // e.preventDefault();
+
+    emailjs.sendForm('service_ktznnus', 'template_7yfrjhg', form.current, 'jMXsgEU_60K4-MqpR')
+      .then((result) => {
+          console.log(result.text);
+          console.log("message sent");
+      }, (error) => {
+          console.log(error.text);
+      });
+      // e.target.reset()
+  };
+
+  const showAlert = ()=>{
+    alert("Mail Send")
+  }
+
+  const { values, errors, touched, handleBlur, handleChange, handleSubmit } =
+    useFormik({
+      initialValues,
+      validationSchema: formSchema,
+      onSubmit: (values, action) => {
+        action.resetForm();
+        sendEmail()
+        showAlert()
+      },
+    });
+
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
     <div>
       <div className="h-screen md:flex">
-        <div className="relative overflow-hidden md:flex w-4/5 bg-gradient-to-tr from-gray-800 to-purple-700 i justify-around items-center hidden">
-          <div>
-            <h1 className="text-white font-bold text-6xl font-display" data-aos="fade-down" data-aos-duration="3000">ORCHID NIRVANA 3.0</h1>
-            <p className="text-white mt-1" data-aos="fade-up" data-aos-duration="3000">
+        <div className="md:flex w-full justify-around items-center">
+          <div className="w-full">
+            <img className="w-full " src={contactus} />
+          </div>
+
+          <div className="absolute flex flex-col justify-start w-full px-10 flex-wrap">
+            <h1
+              className="text-white font-bold text-6xl font-display"
+              data-aos="fade-down"
+              data-aos-duration="3000"
+            >
+              ORCHID NIRVANA 3.0
+            </h1>
+            <p
+              className="text-white mt-1"
+              data-aos="fade-up"
+              data-aos-duration="3000"
+            >
               The most popular peer to peer lending at SEA
             </p>
-            <button
-              type="submit"
-              className="block px-4 bg-white hover:bg-transparent text-indigo-800 hover:text-white hover:border-2 mt-4 py-2 font-bold mb-2"
-            >
-              Download Brochure
-            </button>
+            <BrochureDownload/>
           </div>
-          <div className="absolute -bottom-32 -left-40 w-80 h-80 border-4 rounded-full border-opacity-30 border-t-8"></div>
-          <div className="absolute -bottom-40 -left-20 w-80 h-80 border-4 rounded-full border-opacity-30 border-t-8"></div>
-          <div className="absolute -top-40 -right-0 w-80 h-80 border-4 rounded-full border-opacity-30 border-t-8"></div>
-          <div className="absolute -top-20 -right-20 w-80 h-80 border-4 rounded-full border-opacity-30 border-t-8"></div>
-        </div>
-        <div className="flex md:w-1/2 justify-center py-10 items-center bg-gradient-to-tr from-purple-700 to-gray-800">
-          <form className="bg-white p-10 py-16">
-            <h1 className="text-gray-800 font-bold text-xl mb-1">Special Pre Launch Offer For </h1>
-            <h1 className="text-gray-800 font-bold text-xl mb-1 mt-2">The First Few Customers </h1>
 
-            <div className="flex items-center border-2 py-2 px-3 mb-4 mt-10">
-              <input
-                className="pl-2 outline-none border-none"
-                type="text"
-                name=""
-                id=""
-                placeholder="Full name"
-              />
-            </div>
-            <div className="flex items-center border-2 py-2 px-3 mb-4">
-              <input
-                className="pl-2 outline-none border-none"
-                type="text"
-                name=""
-                id=""
-                placeholder="Mobile Number"
-              />
-            </div>
-            <div className="flex items-center border-2 py-2 px-3 mb-4">
-              <input
-                className="pl-2 outline-none border-none"
-                type="text"
-                name=""
-                id=""
-                placeholder="Email Address"
-              />
-            </div>
-            <div className="flex items-center border-2 py-2 px-3 ">
-              <input
-                className="pl-2 outline-none border-none"
-                type="text"
-                name=""
-                id=""
-                placeholder="Requirement"
-              />
-            </div>
-            <button
-              type="submit"
-              className="block bg-sky-900 hover:bg-gray-700 mt-4 py-2 text-white font-semibold mb-2 px-4"
-            >
-              Register Now
-            </button>
-          </form>
+          <div className="flex md:w-4/5 md:justify-end lg:justify-end items-center absolute justify-center">
+            <form
+              onSubmit={handleSubmit}
+              ref={form} 
+              className="bg-white p-10 py-16 bg-opacity-95"
+             >
+              <h1 className="text-gray-800 font-bold text-xl mb-1">
+                Special Pre Launch Offer For{" "}
+              </h1>
+              <h1 className="text-gray-800 font-bold text-xl mb-1 mt-2">
+                The First Few Customers{" "}
+              </h1>
+
+              <div className="flex items-center border-2 py-2 px-3 mb-4 mt-10">
+                <input
+                  className="pl-2 outline-none border-none"
+                  type="text"
+                  name="name"
+                  id="name"
+                  placeholder="Full name"
+                  value={values.name}
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                />
+              </div>
+              <div className="text-red-400 mb-2">
+                {errors.name && touched.name ? (
+                  <p className="form-error">{errors.name} *</p>
+                ) : null}
+              </div>
+              <div className="flex items-center border-2 py-2 px-3 mb-4">
+                <input
+                  className="pl-2 outline-none border-none"
+                  type="text"
+                  name="mobile"
+                  id="mobile"
+                  placeholder="Mobile Number"
+                  value={values.mobile}
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                />
+              </div>
+              <div className="text-red-400 mb-2">
+                {errors.mobile&& touched.mobile ? (
+                  <p className="form-error">{errors.mobile} *</p>
+                ) : null}
+              </div>
+              <div className="flex items-center border-2 py-2 px-3 mb-4">
+                <input
+                  className="pl-2 outline-none border-none"
+                  type="text"
+                  name="email"
+                  id="email"
+                  placeholder="Email Address"
+                  value={values.email}
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                />
+              </div>
+              <div className="text-red-400 mb-2">
+                {errors.email && touched.email ? (
+                  <p className="form-error">{errors.email}</p>
+                ) : null}
+              </div>
+              <div className="flex items-center border-2 py-2 px-3 ">
+                <input
+                  className="pl-2 outline-none border-none"
+                  type="text"
+                  name="message"
+                  id="message"
+                  placeholder="Requirement"
+                  value={values.message}
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                />
+              </div>
+              <div className="text-red-400 mb-2">
+                {errors.message && touched.message ? (
+                  <p className="form-error">{errors.message} *</p>
+                ) : null}
+              </div>
+              <button
+                type="submit"
+                className="block bg-sky-900 hover:bg-gray-700 mt-4 py-2 text-white font-semibold mb-2 px-4"
+              >
+                Register Now
+              </button>
+            </form>
+          </div>
         </div>
       </div>
     </div>
@@ -83,3 +185,4 @@ const Form = () => {
 };
 
 export default Form;
+

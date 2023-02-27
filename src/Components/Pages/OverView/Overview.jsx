@@ -1,5 +1,6 @@
 import React from "react";
 import flat from "../../../images/orch.jpg";
+import Enquire from "../../Modals/Enquire";
 
 function Overview() {
   return (
@@ -130,9 +131,7 @@ function Overview() {
         </table>
       </div>
       <div className=" ml-64 flex justify-start">
-        <button className="bg-slate-800 text-white rounded-md p-3 white mb-4 mt-6 py-3 w-48 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-slate-900 duration-300">
-          Enquire Now
-        </button>
+        <Enquire/>
       </div>
     </div>
   );
