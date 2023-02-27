@@ -2,7 +2,6 @@ import { useState } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { saveAs } from "file-saver";
-import { useAlert } from 'react-alert'
 import brochure from '../../images/Orchid-Nirvana-E-Brochure.pdf'
 
 //Form schema
