@@ -84,7 +84,7 @@ function Overview() {
               Total Development Size:
             </th>
             <th className="border border-gray-300 md:p-3 font-light text-lg text-start ">
-              
+              16 Acres
             </th>
           </tr>
           <tr>
@@ -101,7 +101,7 @@ function Overview() {
               Total Number of plots:
             </th>
             <th className="border border-gray-300 md:p-3 font-light text-lg text-start">
-              220
+              217
             </th>
           </tr>
           <tr>
