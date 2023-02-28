@@ -26,7 +26,7 @@ function Overview() {
         <br />
         <p className="text-justify">
           Currently North Bangalore is the most developing part of the
-          Bangalore. From Orchid Nirvana 2.0, Bangalore International Airport is
+          Bangalore. From Orchid Nirvana 3.0, Bangalore International Airport is
           just 10 minutes drive away. As this property is surrounded by fully
           developed infrastructure & well connected, so commuting is much easier
           & the investments are promising. It is coming up in the upcoming IT
