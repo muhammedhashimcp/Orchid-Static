@@ -12,7 +12,7 @@ function Overview() {
       </div>
       <div className="mt-6 text-xl ml-5 mr-5 md:ml-20 md:mr-20 md:px-28 px-10">
         <p className="text-justify">
-          Orchid Nirvana 2.0 is an upcoming premium lifestyle plotted
+          Orchid Nirvana 3.0 is an upcoming premium lifestyle plotted
           development by Hariyana Goyal & Co. group located very much next to
           NH-44, Bangalore International Airport Road, Bellary Road, Bangalore
           North. It has a vast clubhouse. There are fully loaded facilities
@@ -64,10 +64,10 @@ function Overview() {
           </tr>
           <tr>
             <th className="border border-gray-300  font-bold text-lg text-start md:p-3 ">
-              Approved
+              Approval 
             </th>
             <th className="border border-gray-300 md:p-3 font-light text-lg text-start">
-              RERA & BIAPPA Approved
+            Pending Approval 
             </th>
           </tr>
           <tr>
@@ -75,7 +75,7 @@ function Overview() {
               RERA Approval Number:
             </th>
             <th className="border border-gray-300 md:p-3 font-light text-lg text-start">
-              PRM/KA/RERA/1250/303/PR/010222/004663
+              Awaiting
             </th>
           </tr>
 
@@ -84,7 +84,7 @@ function Overview() {
               Total Development Size:
             </th>
             <th className="border border-gray-300 md:p-3 font-light text-lg text-start ">
-              38 + Acres
+              
             </th>
           </tr>
           <tr>
@@ -101,7 +101,7 @@ function Overview() {
               Total Number of plots:
             </th>
             <th className="border border-gray-300 md:p-3 font-light text-lg text-start">
-              493
+              220
             </th>
           </tr>
           <tr>

@@ -8,7 +8,7 @@ const MasterPlan = () => {
             <h1 className='text-3xl font-display font-semibold'>Orchid Nirvana 3.0 Master Plan</h1>
         </div>
         <div className='flex justify-center mt-8'>
-            <img className="h-auto max-w-full" src={master}></img>
+            <img className="h-auto max-w-full blur-lg" src={master}></img>
         </div>
     </div>
   )

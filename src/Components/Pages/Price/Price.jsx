@@ -35,7 +35,7 @@ const Price = () => {
           </div>
         </div>
       </div>
-      <div className="mt-24 ">
+      {/* <div className="mt-24 ">
         <div className="text-center text-2xl ">
           Download detailed cost sheet{" "}
         </div>
@@ -49,14 +49,14 @@ const Price = () => {
         </div>
         <div className="flex justify-center">
           <CostSheet/>
-          {/* <a href="data.png" download="data.png">
+          <a href="data.png" download="data.png">
             <button className="bg-black border border-yellow-500 rounded-md text-yellow-400 mb-4 p-4 mt-6 py-2 w-60 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-slate-900 duration-300">
               Download Cost sheet
             </button>
-          </a> */}
+          </a>
 
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
