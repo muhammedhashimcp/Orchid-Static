@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { saveAs } from "file-saver";
+import {toast} from 'react-toastify'
 import brochure from '../../images/Orchid-Nirvana-E-Brochure.pdf'
 
 //Form schema
@@ -22,6 +23,10 @@ export default function Brochure() {
 
   const [showModal, setShowModal] = useState(false);
 
+  const showAlert= ()=>{
+    toast.success('Downloaded, Thank you')
+  }
+
   const { values, errors, touched, handleBlur, handleChange, handleSubmit } =
     useFormik({
       initialValues,
@@ -30,9 +35,8 @@ export default function Brochure() {
         console.log('Downloading');
         saveAs(brochure, "Orchid-Nirvana-E-Brochure.pdf");
         action.resetForm();
-
+        showAlert()
       },
-
     });
 
   return (

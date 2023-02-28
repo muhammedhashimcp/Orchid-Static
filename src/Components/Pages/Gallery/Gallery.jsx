@@ -4,6 +4,8 @@ import "aos/dist/aos.css";
 import newOne from "../../../images/new1.jpeg";
 import newTwo from "../../../images/new2.jpeg";
 import newThree from "../../../images/new3.jpeg";
+import newFour from "../../../images/new4.jpeg";
+import newFive from "../../../images/new5.jpeg";
 
 const Gallery = () => {
   return (
@@ -28,6 +30,15 @@ const Gallery = () => {
             <img src={newThree} height="4000px" width="450px" data-aos="fade-left"
               data-aos-duration="3000"/>
           </div>
+        </div>
+
+        <div>
+          <img src={newFour} height="4000px" width="450px" data-aos="fade-left"
+              data-aos-duration="3000"/>
+        </div>
+        <div>
+          <img src={newFive} height="4000px" width="450px" data-aos="fade-right"
+              data-aos-duration="3000"/>
         </div>
       </div>
     </div>

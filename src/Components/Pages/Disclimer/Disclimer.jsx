@@ -3,6 +3,9 @@ import React from 'react'
 const Disclaimer = () => {
   return (
     <div className='mt-6 text-xl ml-5 mr-5 md:ml-20 md:mr-20 md:px-32 p-4 text-justify '>
+      <h1 className="text-black text-xl md:text-4xl  text-center md:px-10 font-display font-semibold md:m-8 mb-8">
+          Orchid Nirvana 3.0 Disclimer
+        </h1>
 <p>By using or accessing the Website you agree with the Disclaimer without any qualification or limitation.
 The Company reserves the right to terminate, revoke, modify, alter, add and delete any one or more of
 the terms and conditions of the website. The Company shall be under no obligation to notify the visitor

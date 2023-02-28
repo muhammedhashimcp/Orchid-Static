@@ -6,7 +6,7 @@ const Brochure = () => {
     <div>
       <div className="mt-6 text-xl ml-5 mr-5 md:ml-20 md:mr-20 md:px-40 p-4 text-justify">
         <h1 className="text-black text-xl md:text-4xl  text-center md:px-10 font-display font-semibold md:m-8 mb-8">
-          Orchid Nirvana 2.0 Brochure
+          Orchid Nirvana 3.0 Brochure
         </h1>
         <p>
           {" "}

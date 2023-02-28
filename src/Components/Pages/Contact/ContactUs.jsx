@@ -2,6 +2,7 @@ import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import {toast} from 'react-toastify'
 import contactus from "../../../images/contactus.png";
 
 //Form schema
@@ -42,7 +43,7 @@ const Contactus = () => {
   };
 
   const showAlert = ()=>{
-    alert("Mail Send")
+    toast.success('Thank You For your Interest, We will get back to you soon')
   }
 
   const { values, errors, touched, handleBlur, handleChange, handleSubmit } =
@@ -88,7 +89,7 @@ const Contactus = () => {
               className="bg-white p-10 py-16"
              >
               <h1 className="text-gray-800 font-semibold text-xl mb-1">
-                  Please fill your Details Above
+                  Please fill your Details Below
                 </h1>
               <div className="flex items-center border-2 py-2 px-3 mb-4 mt-10">
                 <input

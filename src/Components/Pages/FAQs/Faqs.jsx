@@ -64,9 +64,7 @@ export default function Faqs() {
             </summary>
             <div className="mt-3">
               <p className="text-sm leading-6 text-gray-600">
-                Yes. "Orchid Nirvana 3.0" project RERA approved and RERA
-                registration number is <br />{" "}
-                PRM/KA/RERA/1250/303/PR/010222/004663
+                "Orchid Nirvana 3.0" project is waiting for RERA approval.
               </p>
             </div>
           </details>
@@ -103,11 +101,11 @@ export default function Faqs() {
             </summary>
             <div className="mt-3">
               <p className="text-sm leading-6 text-gray-600">
-                "Orchid Nirvana 3.0" total project area is 38+ acres
+                "Orchid Nirvana 3.0" total project area is 16 Acres.
               </p>
             </div>
           </details>
-          <details className="p-4 rounded-lg">
+          <details className="p-4 rounded-lg cursor-pointer">
             <summary className="font-semibold">
               Is the title of the property clear?
             </summary>

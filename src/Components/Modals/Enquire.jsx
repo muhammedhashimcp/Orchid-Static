@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import {toast} from 'react-toastify'
 
 //Form schema
 const formSchema = Yup.object({
@@ -20,7 +21,7 @@ export default function Enquire() {
   const [showModal, setShowModal] = useState(false);
 
   const showAlert = ()=>{
-    alert("Thank You, We will get back to you soon")
+    toast.success('Thank You, We will get back to you soon')
   }
 
   const { values, errors, touched, handleBlur, handleChange, handleSubmit } =

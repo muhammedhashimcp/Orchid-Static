@@ -1,6 +1,7 @@
-import {BrowserRouter as Router, Routes,Route  } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css';
 import Footer from "./Components/Navigation/Footer";
-// import './App.css'
 import Navbar from "./Components/Navigation/Navbar";
 import Amenities from "./Components/Pages/Amenities/Amenities";
 import Brochure from "./Components/Pages/Brochure/Brochure";
@@ -16,27 +17,30 @@ import Overview from "./Components/Pages/OverView/Overview";
 import Price from "./Components/Pages/Price/Price";
 
 function App() {
-
   return (
+    <>
     <Router>
-      <Navbar/>
-        <Routes>
-          <Route path='/' element={<HomePage/>}/>
-          <Route path='/overview' element={<Overview/>}/>
-          <Route path='/master-plan' element={<MasterPlan/>}/>
-          <Route path='/location' element={<Location/>}/>
-          <Route path='/price' element={<Price/>}/>
-          <Route path='/amenities' element={<Amenities/>}/>
-          <Route path='/gallery' element={<Gallery/>}/>
-          <Route path='/contact-us' element={<Contactus/>}/>
-          <Route path='/brochure' element={<Brochure/>}/>
-          <Route path='/disclimer' element={<Disclaimer/>}/>
-          <Route path='/floor-plan' element={<FloorPlan/>}/>
-        </Routes>
-      <Faqs/>
-      <Footer/>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/overview" element={<Overview />} />
+        <Route path="/master-plan" element={<MasterPlan />} />
+        <Route path="/location" element={<Location />} />
+        <Route path="/price" element={<Price />} />
+        <Route path="/amenities" element={<Amenities />} />
+        <Route path="/gallery" element={<Gallery />} />
+        <Route path="/contact-us" element={<Contactus />} />
+        <Route path="/brochure" element={<Brochure />} />
+        <Route path="/disclimer" element={<Disclaimer />} />
+        <Route path="/floor-plan" element={<FloorPlan />} />
+      </Routes>
+      <Faqs />
+      <Footer />
     </Router>
-  )
+    <ToastContainer toastClassName=" relative flex p-1 min-h-10 rounded-md justify-between overflow-hidden cursor-pointer" />
+    </>
+    
+  );
 }
 
-export default App
+export default App;

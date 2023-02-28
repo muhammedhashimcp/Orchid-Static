@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import {toast} from 'react-toastify'
 
 //Form schema
 const formSchema = Yup.object({
@@ -19,22 +20,19 @@ const initialValues = {
 export default function PreLaunchOffer() {
   const [showModal, setShowModal] = useState(false);
 
+  const showAlert = ()=>{
+    toast.success('Thank You For your Interest, We will get back to you soon')
+  }
+
   const { values, errors, touched, handleBlur, handleChange, handleSubmit } =
     useFormik({
       initialValues,
       validationSchema: formSchema,
       onSubmit: (values, action) => {
-        console.log(
-          "🚀 ~ file: Registration.jsx ~ line 11 ~ Registration ~ values",
-          values
-        );
         action.resetForm();
+        showAlert()
       },
     });
-  console.log(
-    "🚀 ~ file: Registration.jsx ~ line 25 ~ Registration ~ errors",
-    errors
-  );
 
   return (
     <>

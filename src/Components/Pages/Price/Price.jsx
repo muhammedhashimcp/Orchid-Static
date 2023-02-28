@@ -21,14 +21,14 @@ const Price = () => {
           </div>
         </div>
         <div className="h-64 w-80 border-2 border-black block text-center">
-          <div className="mt-10 font-semibold text-2xl">30x40-1200.ft</div>
+          <div className="mt-10 font-semibold text-2xl">30x50-1500.ft</div>
           <div className="text-xl">Price- On Request</div>
           <div>
           <PreLaunchOffer/>
           </div>
         </div>
         <div className="h-64 w-80 border-2  border-black block text-center">
-          <div className="mt-10 font-semibold text-2xl">30x40-1200.ft</div>
+          <div className="mt-10 font-semibold text-2xl">40x60-2400.ft</div>
           <div className="text-xl">Price- On Request</div>
           <div>
           <PreLaunchOffer/>

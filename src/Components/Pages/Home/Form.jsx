@@ -4,9 +4,11 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import {toast} from 'react-toastify'
 
-import contactus from "../../../images/orch.jpg";
+import contactus from "../../../images/bg.jpg";
 import BrochureDownload from "../../Modals/BrochureDownload";
+import Logo from '../../../images/logo.png';
 
 //Form schema
 const formSchema = Yup.object({ 
@@ -45,7 +47,7 @@ const Form = () => {
   };
 
   const showAlert = ()=>{
-    alert("Mail Send")
+    toast.success('Thank You For your Interest, We will get back to you soon')
   }
 
   const { values, errors, touched, handleBlur, handleChange, handleSubmit } =
