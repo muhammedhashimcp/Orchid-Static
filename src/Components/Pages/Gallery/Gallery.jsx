@@ -1,6 +1,6 @@
 import React from "react";
-import flat from "../../../images/flat.avif";
-import floor from "../../../images/floor.jpg";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import newOne from "../../../images/new1.jpeg";
 import newTwo from "../../../images/new2.jpeg";
 import newThree from "../../../images/new3.jpeg";
@@ -15,15 +15,18 @@ const Gallery = () => {
       </div>
       <div className=" flex justify-center flex-wrap gap-5 m-8">
         <div>
-          <img src={newOne} height="4000px" width="450px" />
+          <img src={newOne} height="4000px" width="450px" data-aos="fade-right"
+              data-aos-duration="3000"/>
         </div>
 
-        <div className="flex flex-col justify-around">
+        <div className="flex flex-col justify-around" >
           <div>
-            <img src={newTwo} height="4500px" width="450px" />
+            <img src={newTwo} height="4500px" width="450px" data-aos="fade-left"
+              data-aos-duration="3000"/>
           </div>
           <div>
-            <img src={newThree} height="4000px" width="450px" />
+            <img src={newThree} height="4000px" width="450px" data-aos="fade-left"
+              data-aos-duration="3000"/>
           </div>
         </div>
       </div>
