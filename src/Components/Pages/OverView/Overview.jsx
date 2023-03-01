@@ -4,7 +4,7 @@ import Enquire from "../../Modals/Enquire";
 
 function Overview() {
   return (
-    <div className="container mx-auto mt-64 lg:mt-16  mb-10 p-6">
+    <div className="container mx-auto mt-32 lg:mt-16  mb-10 p-6">
       <div className="flex justify-center">
         <h1 className="text-3xl font-display font-semibold text-center">
           Orchid Nirvana 3.0 Overview
