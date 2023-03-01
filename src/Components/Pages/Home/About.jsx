@@ -4,7 +4,7 @@ const About = () => {
   return (
     <div className="container mx-auto mt-16 mb-10 p-6">
       <div className="flex justify-center">
-        <h1 className="text-3xl font-display font-semibold">About Goyal&Co.</h1>
+        <h1 className="text-3xl font-display font-semibold text-center">About Goyal&Co.</h1>
       </div>
       <div className="mt-6 text-xl ml-5 mr-5 md:ml-20 md:mr-20 md:px-28 px-10">
         <p className="text-justify">

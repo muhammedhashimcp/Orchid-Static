@@ -61,7 +61,7 @@ const Contactus = () => {
     });
 
   return (
-    <div className="mx-auto">
+    <div className="container mx-auto">
       <div className="position relative">
         <div className="">
           <img className="w-full mb-5" src={contactus} />

@@ -7,7 +7,7 @@ const Price = () => {
   return (
     <div className=" container mx-auto mt-16 mb-10 p-6">
       <div className="flex justify-center">
-        <h1 className="text-3xl font-display font-semibold">
+        <h1 className="text-3xl font-display font-semibold text-center">
           Orchid Nirvana 3.0 Price
         </h1>
       </div>

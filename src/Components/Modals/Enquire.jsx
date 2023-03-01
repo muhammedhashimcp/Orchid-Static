@@ -40,8 +40,8 @@ export default function Enquire() {
   );
 
   return (
-    <>
-      <div className="flex items-center justify-center h-60">
+    <div className="container mx-auto">
+      <div className="flex items-center justify-center">
         <button
           className="bg-slate-800 text-white rounded-md p-3 white mb-4 mt-6 py-3 w-48 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-slate-900 duration-300"
           type="button"
@@ -121,6 +121,6 @@ export default function Enquire() {
           </div>
         </>
       ) : null}
-    </>
+    </div>
   );
 }

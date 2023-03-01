@@ -4,9 +4,9 @@ import Enquire from "../../Modals/Enquire";
 
 function Overview() {
   return (
-    <div className="container mx-auto mt-16 mb-10 p-6">
+    <div className="container mx-auto mt-24 lg:mt-16  mb-10 p-6">
       <div className="flex justify-center">
-        <h1 className="text-3xl font-display font-semibold">
+        <h1 className="text-3xl font-display font-semibold text-center">
           Orchid Nirvana 3.0 Overview
         </h1>
       </div>
@@ -45,86 +45,86 @@ function Overview() {
         Project Heighlights:
       </h1>
       <div className="flex justify-center container ml-4">
-        <table className="border border-gray-300 md:m-5 md:ml-10  md:w-[800px] text-sm md:text-md ml-48 w-[1rem] mr-44 ">
+        <table className="border border-gray-300 md:w-4/5 text-sm md:text-md px-4 w-96">
           <tr>
-            <th className="border border-gray-300 font-bold  text-start md:p-3 text-lg">
+            <th className="border border-gray-300 font-bold  text-start p-3 text-lg">
               Project Name:
             </th>
-            <th className="border border-gray-300 md:p-3 text-lg font-light text-start">
+            <th className="border border-gray-300 p-3 text-lg font-light text-start">
               Orchid Nirvana 3.0
             </th>
           </tr>
           <tr>
-            <th className="border border-gray-300 font-bold  text-lg text-start md:p-3">
+            <th className="border border-gray-300 font-bold  text-lg text-start p-3">
               Project Status:
             </th>
-            <th className="border border-gray-300 md:p-3 font-light text-lg text-start ">
+            <th className="border border-gray-300 p-3 font-light text-lg text-start ">
               New Launch
             </th>
           </tr>
           <tr>
-            <th className="border border-gray-300  font-bold text-lg text-start md:p-3 ">
+            <th className="border border-gray-300  font-bold text-lg text-start p-3 ">
               Approval 
             </th>
-            <th className="border border-gray-300 md:p-3 font-light text-lg text-start">
+            <th className="border border-gray-300 p-3 font-light text-lg text-start">
             Pending Approval 
             </th>
           </tr>
           <tr>
-            <th className="border border-gray-300 font-bold text-lg text-start md:p-3 ">
+            <th className="border border-gray-300 font-bold text-lg text-start p-3 ">
               RERA Approval Number:
             </th>
-            <th className="border border-gray-300 md:p-3 font-light text-lg text-start">
+            <th className="border border-gray-300 p-3 font-light text-lg text-start">
               Awaiting
             </th>
           </tr>
 
           <tr>
-            <th className="border border-gray-300  font-bold text-lg text-start md:p-3 ">
+            <th className="border border-gray-300  font-bold text-lg text-start p-3 ">
               Total Development Size:
             </th>
-            <th className="border border-gray-300 md:p-3 font-light text-lg text-start ">
+            <th className="border border-gray-300 p-3 font-light text-lg text-start ">
               16 Acres
             </th>
           </tr>
           <tr>
-            <th className="border border-gray-300 font-bold text-lg text-start md:p-3 ">
+            <th className="border border-gray-300 font-bold text-lg text-start p-3 ">
               Development Type:{" "}
             </th>
-            <th className="border border-gray-300 md:p-3 font-light text-lg text-start">
+            <th className="border border-gray-300 p-3 font-light text-lg text-start">
               Bangalore Recidential,Luxury plotted development
             </th>
           </tr>
           <tr>
-            <th className="border border-gray-300 font-bold text-lg text-start md:p-3 ">
+            <th className="border border-gray-300 font-bold text-lg text-start p-3 ">
               {" "}
               Total Number of plots:
             </th>
-            <th className="border border-gray-300 md:p-3 font-light text-lg text-start">
+            <th className="border border-gray-300 p-3 font-light text-lg text-start">
               217
             </th>
           </tr>
           <tr>
-            <th className="border border-gray-300 font-bold text-lg text-start md:p-3 ">
+            <th className="border border-gray-300 font-bold text-lg text-start p-3 ">
               Possesseion:
             </th>
-            <th className="border border-gray-300 md:p-3 font-light text-lg text-start">
+            <th className="border border-gray-300 p-3 font-light text-lg text-start">
               Dec 2026 onwords
             </th>
           </tr>
           <tr>
-            <th className="border border-gray-300  font-bold text-lg text-start md:p-3 ">
+            <th className="border border-gray-300  font-bold text-lg text-start p-3 ">
               Address:
             </th>
-            <th className="border border-gray-300 md:p-3 font-light text-lg text-start">
+            <th className="border border-gray-300 p-3 font-light text-lg text-start">
               Devanahalli,Bengaluru-562110
             </th>
           </tr>
           <tr>
-            <th className="border border-gray-300 font-bold text-lg text-start md:p-3 ">
+            <th className="border border-gray-300 font-bold text-lg text-start p-3 ">
               LandMark
             </th>
-            <th className="border border-gray-300 md:p-3 font-light text-lg text-start">
+            <th className="border border-gray-300 p-3 font-light text-lg text-start">
               Next to NH-44
             </th>
           </tr>
