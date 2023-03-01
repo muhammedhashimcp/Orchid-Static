@@ -8,7 +8,6 @@ import {toast} from 'react-toastify'
 
 import contactus from "../../../images/bg.jpg";
 import BrochureDownload from "../../Modals/BrochureDownload";
-import Logo from '../../../images/logo.png';
 
 //Form schema
 const formSchema = Yup.object({ 
@@ -73,25 +72,28 @@ const Form = () => {
             <img className="w-full " src={contactus} />
           </div>
 
-          <div className="absolute flex flex-col justify-start w-full px-10 flex-wrap">
+          <div className="lg:absolute flex flex-col justify-start w-full px-10 flex-wrap mt-4 lg:mt-1">
             <h1
-              className="text-white font-bold text-6xl font-display"
+              className="text-black font-bold text-3xl lg:text-6xl font-display lg:text-white "
               data-aos="fade-down"
               data-aos-duration="3000"
             >
               ORCHID NIRVANA 3.0
             </h1>
             <p
-              className="text-white mt-1"
+              className="lg:text-white text-black mt-1"
               data-aos="fade-up"
               data-aos-duration="3000"
             >
               The most popular peer to peer lending at SEA
             </p>
+          </div>
+          <div className='lg:absolute flex flex-col justify-start w-full px-10 mt-3 lg:mt-32'>
             <BrochureDownload/>
           </div>
 
-          <div className="flex md:w-4/5 md:justify-end lg:justify-end items-center absolute justify-center">
+
+          <div className="flex md:w-4/5 md:justify-end lg:justify-end items-center lg:absolute justify-center">
             <form
               onSubmit={handleSubmit}
               ref={form} 
